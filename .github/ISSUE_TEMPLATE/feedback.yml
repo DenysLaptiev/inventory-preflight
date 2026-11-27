@@ -1,0 +1,45 @@
+name: Early user feedback
+description: Help improve the free Inventory Preflight CSV comparison demo.
+title: "[Feedback] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for trying Inventory Preflight! **Please do not upload real inventory exports, customer data, API keys, or credentials.** Use synthetic examples only.
+  - type: dropdown
+    id: role
+    attributes:
+      label: What kind of work do you do?
+      options:
+        - Store owner / ecommerce operations
+        - Warehouse / 3PL operations
+        - Software integrator / developer
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: What workflow would you want this to help with?
+      placeholder: "e.g. comparing a monthly WMS export to storefront stock before upload"
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Did the demo help with your workflow?
+      options:
+        - Tried on the built-in synthetic sample only
+        - Tried with my own non-sensitive file exports
+        - Cannot use with my CSV schema
+        - Not useful for my workflow
+    validations:
+      required: true
+  - type: textarea
+    id: blockers
+    attributes:
+      label: What is missing or incorrect?
+      placeholder: "Describe field names or an example with made-up SKUs and quantities. No real data."
+    validations:
+      required: false
